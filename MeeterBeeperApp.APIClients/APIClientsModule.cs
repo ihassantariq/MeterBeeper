@@ -16,7 +16,7 @@ namespace MeeterBeeperApp.APIClients
         public void RegisterTypes(IContainerRegistry containerRegistry)
         {
             containerRegistry.RegisterSingleton<HttpClientProvider>();
-            containerRegistry.RegisterSingleton<IUserApiClient, UserApiClient>();
+            containerRegistry.RegisterSingleton<IDeviceLocationApiClient, DeviceLocationApiClient>();
         }
     }
 }

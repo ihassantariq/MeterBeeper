@@ -9,5 +9,7 @@ namespace MeeterBeeperApp.Data.Models
         public double Longitude { get; set; }
         public double Latitude { get; set; }
         public string DeviceId { get; set; }
+
+        public double Distance { get; set; }
     }
 }

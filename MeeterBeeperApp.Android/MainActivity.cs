@@ -2,6 +2,10 @@
 using Android.App;
 using Android.Content.PM;
 using Android.OS;
+using Android.Runtime;
+using MeeterBeeperApp.Droid.Helper;
+using MeeterBeeperApp.Helper;
+using Plugin.Permissions;
 using Prism;
 using Prism.Ioc;
 
@@ -26,13 +30,23 @@ namespace MeeterBeeperApp.Droid
             global::Xamarin.Forms.Forms.Init(this, bundle);
             LoadApplication(new App(new AndroidInitializer()));
         }
+
+        public override void OnRequestPermissionsResult(int requestCode, string[] permissions, [GeneratedEnum] Android.Content.PM.Permission[] grantResults)
+        {
+            Xamarin.Essentials.Platform.OnRequestPermissionsResult(requestCode, permissions, grantResults);
+            PermissionsImplementation.Current.OnRequestPermissionsResult(requestCode, permissions, grantResults);
+            base.OnRequestPermissionsResult(requestCode, permissions, grantResults);
+        }
     }
+
+
 
     public class AndroidInitializer : IPlatformInitializer
     {
         public void RegisterTypes(IContainerRegistry containerRegistry)
         {
             // Register any platform specific implementations
+            containerRegistry.RegisterSingleton<IDeviceInfo, DeviceInfo>();
         }
     }
 }

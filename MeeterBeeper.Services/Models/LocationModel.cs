@@ -15,6 +15,6 @@ namespace MeeterBeeperApp.Services
         [FirestoreProperty]
         public double Latitude { get; set; }
 
-        public int Distance { get; set; }
+        public double Distance { get; set; }
     }
 }

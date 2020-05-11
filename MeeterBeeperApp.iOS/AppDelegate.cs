@@ -1,4 +1,6 @@
 ﻿using Foundation;
+using MeeterBeeper.iOS.Helper;
+using MeeterBeeperApp.Helper;
 using Prism;
 using Prism.Ioc;
 using UIKit;
@@ -26,7 +28,6 @@ namespace MeeterBeeperApp.iOS
             FFImageLoading.Forms.Platform.CachedImageRenderer.Init();
             LoadApplication(new App(new iOSInitializer()));
 
-
             return base.FinishedLaunching(app, options);
         }
     }
@@ -36,6 +37,7 @@ namespace MeeterBeeperApp.iOS
         public void RegisterTypes(IContainerRegistry containerRegistry)
         {
             // Register any platform specific implementations
+            containerRegistry.RegisterSingleton<IDeviceInfo, DeviceInfo>();
         }
     }
 }

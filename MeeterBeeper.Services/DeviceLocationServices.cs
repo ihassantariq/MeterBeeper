@@ -60,9 +60,10 @@ namespace MeeterBeeper.Services
                         Location currentUserLocation = new Location(location.Latitude, location.Longitude);
                         Location otherUserLocation = new Location(locationModel.Latitude, locationModel.Longitude);
                         double km = Location.CalculateDistance(currentUserLocation, otherUserLocation, DistanceUnits.Kilometers);
-                        int distance = (int) km * 1000;
+                        double distance = km * 1000;
                         if( distance <= location.Distance)
                         {
+                            locationModel.Distance = distance;
                             nearbyDevices.Add(locationModel);
                         }
                         
