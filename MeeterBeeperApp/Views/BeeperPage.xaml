@@ -1,0 +1,86 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MeeterBeeperApp.Views.BeeperPage"
+             NavigationPage.HasNavigationBar="False"
+             xmlns:ffimageloading="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
+             IsBusy="{Binding IsBusy}"
+             Title="{Binding Title}">
+    
+    
+    <ContentPage.Padding>
+        <OnPlatform x:TypeArguments="Thickness">
+            <On Platform="Android">0,0,0,0</On>
+            <On Platform="iOS">0,20,0,0</On>
+        </OnPlatform>
+    </ContentPage.Padding>
+
+    <ContentPage.Content>
+        <Grid BackgroundColor="White" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+            <ActivityIndicator IsVisible="{Binding IsBusy}" IsRunning="{Binding IsBusy}" Color="#3897F0"  HorizontalOptions="Center" />
+            <Grid IsVisible="{Binding IsShowControls}" RowSpacing="20"  HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="3*" />
+                    <RowDefinition Height="1*" />
+                    <RowDefinition Height="2*" />
+                    <RowDefinition Height="1*" />
+                    <RowDefinition Height="3*" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="1*"/>
+                    <ColumnDefinition Width="4*"/>
+                    <ColumnDefinition Width="1*"/>
+                </Grid.ColumnDefinitions>
+                <Grid Grid.Row="1" Grid.Column="1"  
+                      HorizontalOptions="CenterAndExpand" 
+                      VerticalOptions="CenterAndExpand">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="1*"/>
+                        <ColumnDefinition Width="2*"/>
+                        <ColumnDefinition Width="1*"/>
+                    </Grid.ColumnDefinitions>
+                    <Label
+                        Grid.Column="0"
+                        FontFamily="{StaticResource fontFamilyFreeS}"
+                        TextColor="#6b56cf"
+                        FontSize="35"
+                        HorizontalTextAlignment="Center" 
+                        Text="&#xf060;"
+                        FontAttributes="Bold"
+                        VerticalOptions="CenterAndExpand"
+                        VerticalTextAlignment="End" >
+                        <Label.GestureRecognizers>
+                            <TapGestureRecognizer Command="{Binding DecrementCommand}" />
+                        </Label.GestureRecognizers>
+                    </Label>
+                    <Label
+                        Grid.Column="1"
+                        TextColor="#bd64e6"
+                        FontSize="50"
+                        HorizontalTextAlignment="Center"
+                        FontAttributes="Bold"
+                        Text="2"
+                         VerticalOptions="Start"
+                        VerticalTextAlignment="Center" />
+                    <Label
+                        Grid.Column="2"
+                        FontFamily="{StaticResource fontFamilyFreeS}"
+                        TextColor="#6b56cf"
+                        FontSize="35"
+                        HorizontalTextAlignment="Center" 
+                        FontAttributes="Bold"
+                        VerticalOptions="CenterAndExpand"
+                        Text="&#xf061;"
+                        VerticalTextAlignment="End" >
+                        <Label.GestureRecognizers>
+                            <TapGestureRecognizer Command="{Binding DecrementCommand}" />
+                        </Label.GestureRecognizers>
+                    </Label>
+                </Grid>
+                <ffimageloading:CachedImage Source="ic_virus.png"  Grid.Row="2"  Grid.Column="1" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"  />
+                <ffimageloading:CachedImage Source="ic_meterbeeper.png" Grid.Row="3" Grid.Column="1"  HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" />
+            </Grid>
+        </Grid>
+    </ContentPage.Content>
+
+</ContentPage>

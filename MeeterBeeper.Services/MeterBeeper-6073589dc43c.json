@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "meterbeeper",
+  "private_key_id": "6073589dc43cbde58c507e6fdb298969d8f329d2",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQDf3FW7t1fghSuz\nEwheMJ7eO65xSZIK/DH49oXe3BN9b+w5kL0zz+L9b/rXKX+8anZcvUsCrviN3hkM\nmqwunI5FmgxPShviuaCknVjXoBtpRcibAzUxYwhwgwuB00rQ0C1z0E0XHLagIQ9q\nYgPQzi0YKATI4JhX7wFgh/FQmsOsD6lhQZcXwBX5mZ0qYAsCUyIcFcAcaDKuRH6E\ngi3nARbplUi7hvXIGyqcIW1FJiQC5Lo8LMXPZKxx7ZQ6Xg01SYhKRZAzfw/k6A5r\nLqIr+fVgfdmcvCy9ZRpOlspu6z1NGMBVy9+qCLphc9OH+Mlunk4VDloMPaX3/eHd\n5vMC10IhAgMBAAECggEAZBZ5uHeVUTuJWcPRMnevmDH74QfhRYsTdroWCZnBFwzT\nA7vcdA1m8iQ+dTPHOkEpUXaK0pTTaW6bKYEAKcjybVkeVtcOF7UiB2eYYLPjfZJn\nSjNJdZ7PF6rnmrCTG0Bwif7gcMx0NK0DXO+cwB9mlw3RcdTFGE+ygGvXb0/623LB\nGRFazQvaUgjSKQlU3UdiqOFrQbu5lRNWcuNWIsP3a1o8LjDszonhuNp2FxX94YaY\nV02Ipg+xC7Yka6h1SLLX3kV947zPk2FPNJUyWACO58jpnO7iiggXPX9Pk8tKvLqF\nDMJdLI3Rxax8zFSVRuiJCiikAT0dUH3lCGQ6F73D7wKBgQDwmS7MXAFoh5SBKkVD\nxV6dXUTJ+jqt8VROQxYcbauCCNNTxO+QIlT8dPipvTgYQPHlu4/joHreIj/L5TLy\nBMmrL4psfMPGa9RJhMC3kiRGKawJapPDRT257vm3TtyfC9Bl154bkj/TBoWDSjsc\njQWCL6xNKuP/AHLXlB7FP9Vv0wKBgQDuMNzJbZfdm5RXpt8wqvzuvMMusaTqpk+M\nyfZGVtPdh69h29oE6h7AT/wHGcI5ADB8jOXV+ihmQeHBn+Y2idp/iYKJe1v2P9Sl\nNV8EOnuNcY7xazV5QwLpRxSP8SMzosc3q4yraG3wK69E7tuZBuwCmFuzni90BsGg\nkQ3awQ5BuwKBgFN9dKXpz3tMgRYJaxvHY7vL39EPCknOEulNkmCvFfL7yQmqr08e\n+srYdGnChbK05rxHx/i/eaOX0veYQ4OEcc77oldfPDigtnwEmzOYfQnz8AUcfMYo\nQvFAolsf/KMcYGbW2cDLkWZTPwV+PuD7dsvkazAkEBYvO6rfdYYRTqmNAoGAbMo6\nfXGl1FzT4zjfZc4jGjNy/me6yEXPvaEc78GGoP7xFsQgjvATvYiKtv+H2xsAClMc\nQqAwRYw/vXz3298YwfmfeoWyWgWLbS20SS0g81hzjkaGNO1rbfq+JIRhrJrjXMTo\nyf03gWOieNyTxhAISaMm9yH/0IGpfFnkNw7IITMCgYEA1cvuYywjGrJPfu6Txd7z\n29dtyDHZmKZf6H/FfIL2xyAG8JI8831rHpL/ne+PqNCcxeD46/TeG9pTBBa/Tk7F\nhbz7WCbf1g093Iw698ljQwn/neJhN5gd+75wluwygbQwMiGNzY5H3yXNxy0tmm20\nx1HViPo+5t4XY23czxcT+qc=\n-----END PRIVATE KEY-----\n",
+  "client_email": "meterbeeper@meterbeeper.iam.gserviceaccount.com",
+  "client_id": "113003108038223820726",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/meterbeeper%40meterbeeper.iam.gserviceaccount.com"
+}

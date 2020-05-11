@@ -1,0 +1,89 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<prism:PrismApplication xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:prism="clr-namespace:Prism.DryIoc;assembly=Prism.DryIoc.Forms"
+             x:Class="MeeterBeeperApp.App">
+	<Application.Resources>
+
+		<!-- Application resource dictionary -->
+        <!--  Font Size section start  -->
+        <x:Double
+        x:Key="largeIconFontSize">24</x:Double>
+        <x:Double
+        x:Key="entryFontSize">14</x:Double>
+        <x:Double
+        x:Key="mediumFontSize">16</x:Double>
+        <x:Double
+        x:Key="smallFontSize">12</x:Double>
+        <x:Double
+        x:Key="microFontSize">9</x:Double>
+
+        <!--  Icon Fonts Family Start -->
+        <OnPlatform
+        x:Key="fontFamilyProB"
+        x:TypeArguments="x:String">
+            <On
+            Platform="iOS"
+            Value="Font Awesome 5 Pro" />
+            <On
+            Platform="Android"
+            Value="Fonts/fa-brands-400.ttf#fa-brands-400" />
+        </OnPlatform>
+
+        <OnPlatform
+        x:Key="fontFamilyProL"
+        x:TypeArguments="x:String">
+            <On
+            Platform="iOS"
+            Value="Font Awesome 5 Pro" />
+            <On
+            Platform="Android"
+            Value="Fonts/fa-light-300.ttf#Font Awesome 5 Pro Light" />
+        </OnPlatform>
+
+        <OnPlatform
+        x:Key="fontFamilyProR"
+        x:TypeArguments="x:String">
+            <On
+            Platform="iOS"
+            Value="Font Awesome 5 Pro" />
+            <On
+            Platform="Android"
+            Value="Fonts/fa-regular-400.ttf#fa-regular-400" />
+        </OnPlatform>
+
+        <OnPlatform
+        x:Key="fontFamilyFreeB"
+        x:TypeArguments="x:String">
+            <On
+            Platform="iOS"
+            Value="Font Awesome 5 Free" />
+            <On
+            Platform="Android"
+            Value="Fonts/Font Awesome 5 Brands-Regular-400.otf#Font Awesome 5 Brands Regular" />
+        </OnPlatform>
+
+        <OnPlatform
+        x:Key="fontFamilyFreeR"
+        x:TypeArguments="x:String">
+            <On
+            Platform="iOS"
+            Value="Font Awesome 5 Free" />
+            <On
+            Platform="Android"
+            Value="Fonts/Font Awesome 5 Free-Regular-400.otf#FFont Awesome 5 Free Regular" />
+        </OnPlatform>
+
+        <OnPlatform
+        x:Key="fontFamilyFreeS"
+        x:TypeArguments="x:String">
+            <On
+            Platform="iOS"
+            Value="Font Awesome 5 Free" />
+            <On
+            Platform="Android"
+            Value="Fonts/Font Awesome 5 Free-Solid-900.otf#Font Awesome 5 Free Solid" />
+        </OnPlatform>
+
+    </Application.Resources>
+</prism:PrismApplication>
