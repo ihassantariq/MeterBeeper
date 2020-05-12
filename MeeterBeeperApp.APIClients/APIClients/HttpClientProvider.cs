@@ -12,7 +12,7 @@ namespace MeeterBeeperApp.APIClients.APIClients
         #region Private Properties
 
         //private static readonly string BaseUrl = @"https://api.github.com/";
-        private static readonly string BaseUrl = @"http://192.168.0.106:5005";
+        private static readonly string BaseUrl = @"http://meeterbeeperservices-dev.us-east-2.elasticbeanstalk.com/";
 
         #endregion
 

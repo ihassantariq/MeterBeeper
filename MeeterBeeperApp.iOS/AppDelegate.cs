@@ -1,4 +1,5 @@
-﻿using Foundation;
+﻿using AVFoundation;
+using Foundation;
 using MeeterBeeper.iOS.Helper;
 using MeeterBeeperApp.Helper;
 using Prism;
@@ -27,8 +28,15 @@ namespace MeeterBeeperApp.iOS
             //FFimage loading initialization
             FFImageLoading.Forms.Platform.CachedImageRenderer.Init();
             LoadApplication(new App(new iOSInitializer()));
-
+            EnableBackgroundAudio();
             return base.FinishedLaunching(app, options);
+        }
+        private void EnableBackgroundAudio()
+        {
+            var currentSession = AVAudioSession.SharedInstance();
+            currentSession.SetCategory(AVAudioSessionCategory.Playback,
+                AVAudioSessionCategoryOptions.MixWithOthers);
+            currentSession.SetActive(true);
         }
     }
 
@@ -40,4 +48,5 @@ namespace MeeterBeeperApp.iOS
             containerRegistry.RegisterSingleton<IDeviceInfo, DeviceInfo>();
         }
     }
+   
 }

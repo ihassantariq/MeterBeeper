@@ -11,14 +11,14 @@
     <ContentPage.Padding>
         <OnPlatform x:TypeArguments="Thickness">
             <On Platform="Android">0,0,0,0</On>
-            <On Platform="iOS">0,20,0,0</On>
+            <On Platform="iOS">0,0,0,0</On>
         </OnPlatform>
     </ContentPage.Padding>
 
     <ContentPage.Content>
         <Grid BackgroundColor="White" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
             <ActivityIndicator IsVisible="{Binding IsBusy}" IsRunning="{Binding IsBusy}" Color="#3897F0"  HorizontalOptions="Center" />
-            <Grid IsVisible="{Binding IsShowControls}" RowSpacing="20"  HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+            <Grid BackgroundColor="White" IsVisible="{Binding IsShowControls}" RowSpacing="20"  HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="3*" />
                     <RowDefinition Height="1*" />
@@ -50,7 +50,7 @@
                         VerticalOptions="CenterAndExpand"
                         VerticalTextAlignment="End" >
                         <Label.GestureRecognizers>
-                            <TapGestureRecognizer Command="{Binding DecrementCommand}" />
+                            <TapGestureRecognizer Command="{Binding DecrimentCommand}" />
                         </Label.GestureRecognizers>
                     </Label>
                     <Label
@@ -59,7 +59,7 @@
                         FontSize="50"
                         HorizontalTextAlignment="Center"
                         FontAttributes="Bold"
-                        Text="2"
+                        Text="{Binding Distance}"
                          VerticalOptions="Start"
                         VerticalTextAlignment="Center" />
                     <Label
@@ -73,7 +73,7 @@
                         Text="&#xf061;"
                         VerticalTextAlignment="End" >
                         <Label.GestureRecognizers>
-                            <TapGestureRecognizer Command="{Binding DecrementCommand}" />
+                            <TapGestureRecognizer Command="{Binding IncrimentCommand}" />
                         </Label.GestureRecognizers>
                     </Label>
                 </Grid>

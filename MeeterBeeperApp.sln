@@ -13,7 +13,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MeeterBeeperApp.APIClients"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MeeterBeeperApp.Data", "MeeterBeeperApp.Data\MeeterBeeperApp.Data.csproj", "{9C85C6E3-43BD-49B2-9C18-1644D4F4A973}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MeeterBeeper.Services", "MeeterBeeper.Services\MeeterBeeper.Services.csproj", "{B1211C3B-8382-4D2E-A6CB-06E71A9B5911}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MeeterBeeper.Services", "MeeterBeeper.Services\MeeterBeeper.Services.csproj", "{B1211C3B-8382-4D2E-A6CB-06E71A9B5911}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -183,6 +183,7 @@ Global
 		{A2C5EF5E-DF8E-4BFC-A2FA-06CA8EB0FB14}.Debug|ARM.ActiveCfg = Debug|iPhone
 		{A2C5EF5E-DF8E-4BFC-A2FA-06CA8EB0FB14}.Debug|iPhone.ActiveCfg = Debug|iPhone
 		{A2C5EF5E-DF8E-4BFC-A2FA-06CA8EB0FB14}.Debug|iPhone.Build.0 = Debug|iPhone
+		{A2C5EF5E-DF8E-4BFC-A2FA-06CA8EB0FB14}.Debug|iPhone.Deploy.0 = Debug|iPhone
 		{A2C5EF5E-DF8E-4BFC-A2FA-06CA8EB0FB14}.Debug|iPhoneSimulator.ActiveCfg = Debug|iPhoneSimulator
 		{A2C5EF5E-DF8E-4BFC-A2FA-06CA8EB0FB14}.Debug|iPhoneSimulator.Build.0 = Debug|iPhoneSimulator
 		{A2C5EF5E-DF8E-4BFC-A2FA-06CA8EB0FB14}.Debug|x64.ActiveCfg = Debug|iPhone

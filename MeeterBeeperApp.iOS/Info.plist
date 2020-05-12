@@ -10,8 +10,6 @@
 	<key>UISupportedInterfaceOrientations</key>
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>
-		<string>UIInterfaceOrientationLandscapeLeft</string>
-		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
 	<key>UISupportedInterfaceOrientations~ipad</key>
 	<array>
@@ -57,11 +55,18 @@
 	<string>Assets.xcassets/AppIcons.appiconset</string>
 	<key>CFBundleDisplayName</key>
 	<string>Meeter Beeper</string>
-	<key>UIStatusBarStyle</key>
-	<string>UIStatusBarStyleLightContent</string>
 	<key>CFBundleName</key>
 	<string>Meeter Beeper</string>
 	<key>NSLocationWhenInUseUsageDescription</key>
 	<string>Fill in a reason why your app needs access to location.</string>
+	<key>UIStatusBarHidden</key>
+	<true/>
+	<key>UIBackgroundModes</key>
+	<array>
+		<string>audio</string>
+		<string>location</string>
+		<string>bluetooth-central</string>
+		<string>fetch</string>
+	</array>
 </dict>
 </plist>

@@ -19,17 +19,27 @@ namespace MeeterBeeperApp.ViewModels
 {
     public class BeeperPageViewModel : ViewModelBase, IPageLifecycleAware
     {
-        private const string JOIN_URL = "https://github.com/join";
         #region Private Properties
+        private  const int DEFAULT_DISTANCE = 2;
         private IDeviceLocationApiClient _deviceLocationApiClient;
         private IPageDialogService _pageDialogService;
         private readonly IDeviceInfo _deviceInfo;
         public string currentDeviceId { set; get; }
         private ISimpleAudioPlayer player;
+        private int _distance = DEFAULT_DISTANCE;
         #endregion
 
         #region Commands
-        public ICommand GithubSignupCommand => new Command(OpenGithubSingupUrl);
+        public ICommand DecrimentCommand => new Command(DecrimentDistance);
+        public ICommand IncrimentCommand => new Command(IncrimentDistance);
+        #endregion
+
+        #region Public Propertiues
+        public int Distance
+        {
+            get { return _distance; }
+            set { SetProperty(ref _distance, value); }
+        }
         #endregion
         public BeeperPageViewModel(INavigationService navigationService,
             IDeviceLocationApiClient deviceLocationApiClient,
@@ -74,7 +84,20 @@ namespace MeeterBeeperApp.ViewModels
             }
 
         }
-
+        private void DecrimentDistance()
+        {
+            if(Distance > 2)
+            {
+                Distance--;
+            }
+        }
+        private void IncrimentDistance()
+        {
+            if (Distance < 100)
+            {
+                Distance++;
+            }
+        }
         public void OnDisappearing()
         {
 
@@ -85,7 +108,7 @@ namespace MeeterBeeperApp.ViewModels
             try
             {
                 var status = await CrossPermissions.Current.CheckPermissionStatusAsync<LocationPermission>();
-                if (status != PermissionStatus.Granted)
+                 if (status != PermissionStatus.Granted)
                 {
                     if (await CrossPermissions.Current.ShouldShowRequestPermissionRationaleAsync(Permission.Location))
                     {
@@ -108,7 +131,7 @@ namespace MeeterBeeperApp.ViewModels
                             DeviceId = currentDeviceId,
                             Latitude = location.Latitude,
                             Longitude = location.Longitude,
-                            Distance = 2
+                            Distance = this.Distance
                         };
                         var locationSave = await _deviceLocationApiClient.SaveLocation(locationModel);
                         if (locationSave)
@@ -151,11 +174,6 @@ namespace MeeterBeeperApp.ViewModels
 
 
 
-        }
-
-        private async void OpenGithubSingupUrl()
-        {
-            await Xamarin.Essentials.Launcher.OpenAsync(new Uri(JOIN_URL));
         }
 
         Stream GetStreamFromFile(string filename)
