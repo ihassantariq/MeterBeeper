@@ -3,7 +3,7 @@
 	<uses-sdk android:minSdkVersion="21" android:targetSdkVersion="28" />
 	<uses-permission android:name="android.permission.INTERNET" />
 	<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-	<application android:label="Github Users" android:icon="@mipmap/ic_virus" android:networkSecurityConfig="@xml/network_security_config"></application>
+	<application android:icon="@mipmap/ic_virus" android:networkSecurityConfig="@xml/network_security_config" android:label="Meter Beeper"></application>
 	<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
 	<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
 	<uses-feature android:name="android.hardware.location" android:required="false" />

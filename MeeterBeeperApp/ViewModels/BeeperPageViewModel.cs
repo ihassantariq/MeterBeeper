@@ -20,7 +20,7 @@ namespace MeeterBeeperApp.ViewModels
     public class BeeperPageViewModel : ViewModelBase, IPageLifecycleAware
     {
         #region Private Properties
-        private  const int DEFAULT_DISTANCE = 2;
+        private const int DEFAULT_DISTANCE = 2;
         private IDeviceLocationApiClient _deviceLocationApiClient;
         private IPageDialogService _pageDialogService;
         private readonly IDeviceInfo _deviceInfo;
@@ -86,7 +86,7 @@ namespace MeeterBeeperApp.ViewModels
         }
         private void DecrimentDistance()
         {
-            if(Distance > 2)
+            if (Distance > 2)
             {
                 Distance--;
             }
@@ -108,7 +108,7 @@ namespace MeeterBeeperApp.ViewModels
             try
             {
                 var status = await CrossPermissions.Current.CheckPermissionStatusAsync<LocationPermission>();
-                 if (status != PermissionStatus.Granted)
+                if (status != PermissionStatus.Granted)
                 {
                     if (await CrossPermissions.Current.ShouldShowRequestPermissionRationaleAsync(Permission.Location))
                     {
@@ -141,13 +141,25 @@ namespace MeeterBeeperApp.ViewModels
                             {
                                 if (!player.IsPlaying)
                                 {
-                                    player.Play();
+                                    Device.BeginInvokeOnMainThread(() =>
+                                    {
+                                        player.Play();
+                                    });
+
+
                                 }
                                 return true;
                             }
                             else
                             {
-                                player.Stop();
+                                if (player.IsPlaying)
+                                {
+                                    Device.BeginInvokeOnMainThread(() =>
+                                    {
+                                        player.Stop();
+                                    });
+
+                                }
                                 return true;
                             }
                         }
