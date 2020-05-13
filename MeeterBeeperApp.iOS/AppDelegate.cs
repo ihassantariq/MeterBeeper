@@ -1,4 +1,5 @@
-﻿using AVFoundation;
+﻿using System.Diagnostics;
+using AVFoundation;
 using Foundation;
 using MeeterBeeper.iOS.Helper;
 using MeeterBeeperApp.Helper;
@@ -46,7 +47,8 @@ namespace MeeterBeeperApp.iOS
         {
             // Register any platform specific implementations
             containerRegistry.RegisterSingleton<IDeviceInfo, DeviceInfo>();
+            containerRegistry.RegisterSingleton<IGetLocation, GetLocation>();
         }
     }
-   
+
 }

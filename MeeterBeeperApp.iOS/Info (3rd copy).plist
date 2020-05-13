@@ -88,9 +88,7 @@
 	<string>LaunchScreen</string>
 	<key>NSLocationAlwaysUsageDescription</key>
 	<string>Meeter Beeper Need Location</string>
-	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
-	<string>Meeter Beeper Need Location</string>
-	<key>AllowsBackgroundLocationUpdates</key>
-	<true/>
+	<key>Custom Property</key>
+	<string></string>
 </dict>
 </plist>

@@ -102,6 +102,13 @@
     <BundleResource Include="Resources\Fonts\Font Awesome 5 Free-Regular-400.otf" />
     <BundleResource Include="Resources\Fonts\Font Awesome 5 Free-Solid-900.otf" />
     <Compile Include="Helper\DeviceInfo.cs" />
+    <None Include="Info %28copy%29.plist" />
+    <None Include="Info %28another copy%29.plist" />
+    <None Include="Info %283rd copy%29.plist" />
+    <None Include="Info %284th copy%29.plist" />
+    <None Include="Info %285th copy%29.plist" />
+    <Compile Include="Helper\LocationManager.cs" />
+    <Compile Include="Helper\GetLocation.cs" />
   </ItemGroup>
   <ItemGroup>
     <ImageAsset Include="Assets.xcassets\AppIcons.appiconset\1024.png">
@@ -192,11 +199,18 @@
     <PackageReference Include="Plugin.Permissions">
       <Version>6.0.1</Version>
     </PackageReference>
+    <PackageReference Include="Xam.Plugin.Geolocator">
+      <Version>4.5.0.6</Version>
+    </PackageReference>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\MeeterBeeperApp\MeeterBeeperApp.csproj">
       <Project>{FC4F454F-054A-4912-AF28-A6E63C622D01}</Project>
       <Name>MeeterBeeperApp</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MeeterBeeperApp.Data\MeeterBeeperApp.Data.csproj">
+      <Project>{9C85C6E3-43BD-49B2-9C18-1644D4F4A973}</Project>
+      <Name>MeeterBeeperApp.Data</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

@@ -26,7 +26,6 @@ namespace MeeterBeeperApp.Droid
             FFImageLoading.Forms.Platform.CachedImageRenderer.Init(enableFastRenderer: true);
             //user dialog initialization
             UserDialogs.Init(this);
-
             global::Xamarin.Forms.Forms.Init(this, bundle);
             LoadApplication(new App(new AndroidInitializer()));
         }
