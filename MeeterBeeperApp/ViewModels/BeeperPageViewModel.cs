@@ -23,7 +23,7 @@ namespace MeeterBeeperApp.ViewModels
     public class BeeperPageViewModel : ViewModelBase, IPageLifecycleAware
     {
         #region Private Properties
-        private const int DEFAULT_DISTANCE = 2;
+        private const int DEFAULT_DISTANCE = 1;
         private IDeviceLocationApiClient _deviceLocationApiClient;
         private IPageDialogService _pageDialogService;
         private readonly IDeviceInfo _deviceInfo;
@@ -94,14 +94,14 @@ namespace MeeterBeeperApp.ViewModels
                 {
 
                 }
-                
+
             }
 
         }
 
         private void DecrimentDistance()
         {
-            if (Distance > 2)
+            if (Distance > 1)
             {
                 Distance--;
             }
