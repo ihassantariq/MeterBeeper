@@ -135,13 +135,17 @@ namespace MeeterBeeperApp.ViewModels
 
                 if (status == PermissionStatus.Granted)
                 {
-
                     if (await StartListening())
                     {
-                        var request = new Xamarin.Essentials.GeolocationRequest(Xamarin.Essentials.GeolocationAccuracy.Best);
+                        var request = new Xamarin.Essentials.GeolocationRequest(Xamarin.Essentials.GeolocationAccuracy.High,TimeSpan.FromSeconds(10));
                         var location = await Xamarin.Essentials.Geolocation.GetLocationAsync(request).ConfigureAwait(false);
                         if (location != null)
                         {
+                            if (!Xamarin.Essentials.Preferences.Get(App.PlayMusic, false))
+                            {
+                                Xamarin.Essentials.Preferences.Set(App.PlayMusic, true);
+                                return true;
+                            }
                             latitude = location.Latitude;
                             longitude = location.Longitude;
                         }
@@ -155,7 +159,7 @@ namespace MeeterBeeperApp.ViewModels
                         DeviceId = currentDeviceId,
                         Latitude = latitude,
                         Longitude = longitude,
-                        Distance = this.Distance
+                        Distance = this.Distance + 3
                     };
                     var locationSave = await _deviceLocationApiClient.SaveLocation(locationModel);
                     if (locationSave)
@@ -226,7 +230,7 @@ namespace MeeterBeeperApp.ViewModels
                 AllowBackgroundUpdates = true,
                 DeferLocationUpdates = true,
                 DeferralDistanceMeters = 1,
-                DeferralTime = TimeSpan.FromSeconds(1),
+                DeferralTime = TimeSpan.FromSeconds(3),
                 ListenForSignificantChanges = true,
                 PauseLocationUpdatesAutomatically = false
             });

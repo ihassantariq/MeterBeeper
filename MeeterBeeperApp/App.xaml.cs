@@ -17,6 +17,9 @@ namespace MeeterBeeperApp
          * This imposes a limitation in which the App class must have a default constructor. 
          * App(IPlatformInitializer initializer = null) cannot be handled by the Activator.
          */
+
+        public const string PlayMusic = "playMusic";
+
         public App() : this(null) { }
 
         public App(IPlatformInitializer initializer) : base(initializer) { }
@@ -45,6 +48,24 @@ namespace MeeterBeeperApp
                 InitializationMode = InitializationMode.WhenAvailable
             });
             base.ConfigureModuleCatalog(moduleCatalog);
+        }
+
+
+        protected override void OnResume()
+        {
+            Xamarin.Essentials.Preferences.Set(PlayMusic, false);
+            base.OnResume();
+        }
+
+        protected override void OnSleep()
+        {
+            base.OnSleep();
+        }
+
+        protected override void OnStart()
+        {
+            base.OnStart();
+            Xamarin.Essentials.Preferences.Set(PlayMusic, false);
         }
     }
 }
